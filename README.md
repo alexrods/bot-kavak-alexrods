@@ -8,7 +8,7 @@
 - [Descripción](#descripción)
 - [Arquitectura](#arquitectura)
   - [Diagrama de Flujo](#diagrama-de-flujo)
-  - [Prompts, Agentes y Componentes](#prompts-agentes-y-componentes)
+  - [Agentes y Componentes](#agentes-y-componentes)
 - [Roadmap](#roadmap)
 - [Instalación](#instalación)
 - [Uso](#uso)
@@ -40,32 +40,58 @@ El diagrama de flujo describe el proceso desde que un cliente envía un mensaje 
 
 Esta sección describe el progreso planificado y las próximas etapas para llevar la API a producción.
 
-### Fase 1: Desarrollo Inicial
+### Planificación de la Producción
 
-- [x] Configuración del entorno de desarrollo.
-- [x] Creación del esqueleto básico de la API utilizando FastAPI.
-- [x] Implementación de endpoints básicos para manejar mensajes de clientes.
-- [x] Integración de un sistema de logging para monitoreo.
+- **Definir Entorno de Producción**
+  - **Acciones:**
+    - Elegir el entorno de producción (cloud, servidor local, etc.).
+    - Configurar el entorno con herramientas necesarias (Docker, Kubernetes, etc.).
+    - Establecer protocolos de seguridad y acceso.
 
-### Fase 2: Ampliación de Funcionalidades
+- **Implementar Base de Datos Vectorial para Búsqueda Semántica**
+  - **Acciones:**
+    - Crear embeddings de la base de datos de automoviles.
+    - Sincronizar base de datos con base de datos vectorial.
 
-- [ ] Añadir soporte para autenticación y autorización.
-- [ ] Implementar conexión con una base de datos para almacenar mensajes e historial de pedidos.
-- [ ] Desarrollar un sistema de respuestas automáticas utilizando inteligencia artificial.
-- [ ] Mejorar la documentación y pruebas unitarias.
+- **Despliegue del Bot**
+  - **Acciones:**
+    - Integración de bot con Whatsapp Business.
+    - Implementar monitoreo y alertas para el sistema en producción.
 
-### Fase 3: Preparación para Producción
+### Evaluación del Desempeño
 
-- [ ] Configuración de CI/CD para despliegue automático.
-- [ ] Optimización del rendimiento y pruebas de carga.
-- [ ] Implementación de monitorización y alertas en tiempo real.
-- [ ] Despliegue en un entorno de producción seguro.
+- **Definir Métricas de Desempeño**
+  - **Acciones:**
+    - Establecer metricas para evaluar las respuestas del bot (calidad de las respuestas, evitar alucinaciones).
+    - Identificar KPIs relevantes (tiempo de respuesta, tasa de éxito, etc.).
+    - Configurar herramientas de monitoreo y análisis.
 
-### Fase 4: Post-Producción
+- **Implementar Herramientas de Monitoreo**
+  - **Acciones:**
+    - Configurar alertas para métricas críticas.
+    - Realizar análisis regular del desempeño y ajustar configuraciones según sea necesario.
 
-- [ ] Feedback loop con usuarios finales para mejoras continuas.
-- [ ] Integración de nuevas funcionalidades basadas en las necesidades del negocio.
-- [ ] Mantenimiento y actualizaciones regulares.
+- **Revisión y Optimización Continua**
+  - **Acciones:**
+    - Revisar informes de desempeño mensualmente.
+    - Implementar mejoras basadas en análisis de datos y feedback de usuarios.
+
+### Pruebas de Retroceso (Regression Testing)
+
+- **Definir Estrategia de Pruebas**
+  - **Acciones:**
+    - Crear un conjunto de pruebas automatizadas para las funcionalidades críticas.
+    - Desarrollar un marco para la integración continua y pruebas automáticas.
+
+- **Implementar Pruebas Automatizadas**
+  - **Acciones:**
+    - Configurar pruebas unitarias, de integración y de aceptación.
+    - Ejecutar pruebas automáticamente con cada nueva versión del bot.
+
+- **Validación de Versiones Nuevas**
+  - **Acciones:**
+    - Realizar pruebas de regresión antes de desplegar nuevas versiones.
+    - Comparar el desempeño de versiones nuevas con versiones anteriores usando métricas establecidas.
 
 
 ## Instalación
