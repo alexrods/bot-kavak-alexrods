@@ -102,6 +102,8 @@ Para instalar y configurar el proyecto localmente, sigue estos pasos:
 
     ```bash
     git clone https://github.com/alexrods/bot-kavak-alexrods.git
+    ```
+    ```bash
     cd bot-kavak-alexrods
     ```
 
@@ -109,9 +111,11 @@ Para instalar y configurar el proyecto localmente, sigue estos pasos:
 
     ```bash
     python3 -m venv venv
+    ```
+    ```bash
     source venv/bin/activate  # En Windows: venv\Scripts\activate
     ```
-
+    
 3. Instala las dependencias:
 
     ```bash
